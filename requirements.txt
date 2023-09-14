@@ -1,0 +1,6 @@
+langchain
+langchain[all]
+jupyter
+tweepy
+pandas
+python-dotenv
