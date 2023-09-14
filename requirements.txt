@@ -4,3 +4,4 @@ jupyter
 tweepy
 pandas
 python-dotenv
+gradio
