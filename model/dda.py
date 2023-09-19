@@ -21,6 +21,8 @@ from utils import FINAL_FILE_PATH
 load_dotenv('../.flaskenv')
 pd.set_option('display.max_rows',None)
 pd.set_option('display.max_columns',None)
+pd.set_option('display.max_colwidth',None)
+
 
 
 prefix = ("You are a tweet analyst for Digital Dubai Authority."
@@ -36,8 +38,11 @@ insights for these key terms #DigitalDubai, Digital Dubai, #دبي_الرقمي�
 'possibly_sensitive', 'created_at', 'retweet_count', 'reply_count',
 'like_count', 'quote_count', 'bookmark_count', 'impression_count',
 'conversation_id', 'sentiment', 'tone', 'language'"""    
-          "For `Series.str.contains('some_value', regex=True)` Use regex = True first if it gives nan then use regex=False"
-          "Always give aggregated insights against tone, sentiment and language."          
+          "Key Instructions:"
+          "- For `Series.str.contains('some_value', regex=True)` Use regex = True first if it gives nan then use regex=False"
+          "- Always give aggregated insights against tone, sentiment and language." 
+          "- Never truncate commets/tweets/text."
+          "- Give detailed answers as much as possible."         
 )
 
 system_message = SystemMessage(content=prefix)

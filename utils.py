@@ -34,7 +34,7 @@ TWEET_FIELDS = ['author_id','conversation_id','created_at',
                 'possibly_sensitive','public_metrics','referenced_tweets',
                 'source','text']
 
-USER_FIELDS = ['id', 'name', 'username']
+USER_FIELDS = ['id', 'name', 'username','location']
 
 FINAL_COLUMNS = [
     'tweet_id', 'name', 'username', 'author_id', 
@@ -51,5 +51,5 @@ REPLIES_FILE_PATH = os.path.join(os.getcwd(),'data','replies.csv')
 REPLIER_FILE_PATH = os.path.join(os.getcwd(),'data','replier.csv')
 FINAL_FILE_PATH = os.path.join(os.getcwd(),'data','1st_final.csv')
 COMMENTS_FILE_PATH = os.path.join(os.getcwd(),'data','comments.csv')
-EXPANSIONS=['author_id']
+EXPANSIONS=['author_id','geo.place_id']
 
